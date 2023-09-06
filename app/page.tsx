@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <main className="flex md:flex-row min-h-screen flex-col items-start justify-between p-6">
       {/* sidebar */}
-      <div className="top-6 sticky w-[200px]">
+      <div className="top-6 md:sticky w-[200px]">
         <div className="p-5">photos by Christopher Jeffrey</div>
       </div>
       {/* photos */}
