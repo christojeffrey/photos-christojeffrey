@@ -22,10 +22,7 @@ const images = [
     src: "/man-airport.jpg",
     alt: "man at airport",
   },
-  {
-    src: "/man-airport.jpg",
-    alt: "man at airport",
-  },
+
   {
     src: "/bus-stop.jpg",
     alt: "bus stop broad daylight",
@@ -66,10 +63,7 @@ const images = [
     src: "/indonesian-flag-gbk.jpg",
     alt: "indonesian-flag-gbk jakarta",
   },
-  {
-    src: "/top-light-school.jpg",
-    alt: "top light school",
-  },
+
   {
     src: "/waterloo-downtown.jpg",
     alt: "waterloo-downtown",
