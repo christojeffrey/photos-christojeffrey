@@ -97,6 +97,34 @@ const images = [
     src: "/cold-night-further.jpg",
     alt: "cold night further",
   },
+  {
+    src: "/green-book-dana-porter.jpg",
+    alt: "green book dana porter",
+  },
+  {
+    src: "/library-aisle.jpg",
+    alt: "library aisle",
+  },
+  {
+    src: "/carnival-light.jpg",
+    alt: "carnival light",
+  },
+  {
+    src: "/hi-cyn.jpg",
+    alt: "hi cyn",
+  },
+  {
+    src: "/studying-in-library.jpg",
+    alt: "studying in library",
+  },
+  {
+    src: "/library-book.jpg",
+    alt: "library book",
+  },
+  {
+    src: "/books-and-lips.jpg",
+    alt: "books and lips",
+  },
 ];
 
 export default images;
