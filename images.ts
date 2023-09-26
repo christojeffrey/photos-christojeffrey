@@ -125,6 +125,18 @@ const images = [
     src: "/books-and-lips.jpg",
     alt: "books and lips",
   },
+  {
+    src: "/toronto-tower.jpg",
+    alt: "toronto tower",
+  },
+  {
+    src: "/cn-tower.jpg",
+    alt: "cn tower",
+  },
+  {
+    src: "/city-lush.jpg",
+    alt: "city lush",
+  },
 ];
 
 export default images;
