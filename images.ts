@@ -126,8 +126,8 @@ const images = [
     alt: "books and lips",
   },
   {
-    src: "/toronto-tower.jpg",
-    alt: "toronto tower",
+    src: "/toronto-road.jpg",
+    alt: "toronto road",
   },
   {
     src: "/cn-tower.jpg",
