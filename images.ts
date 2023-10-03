@@ -137,6 +137,38 @@ const images = [
     src: "/city-lush.jpg",
     alt: "city lush",
   },
+  {
+    src: "/dark-road.jpg",
+    alt: "dark road",
+  },
+  {
+    src: "/feet.jpg",
+    alt: "feet",
+  },
+  {
+    src: "/niagara-background.jpg",
+    alt: "niagara background",
+  },
+  {
+    src: "/niagara-bridge.jpg",
+    alt: "niagara bridge",
+  },
+  {
+    src: "/niagara-road.jpg",
+    alt: "niagara road",
+  },
+  {
+    src: "/niagara-to-us.jpg",
+    alt: "niagara to us",
+  },
+  {
+    src: "/niagara-traffic.jpg",
+    alt: "niagara traffic",
+  },
+  {
+    src: "/park.jpg",
+    alt: "park",
+  },
 ];
 
 export default images;
