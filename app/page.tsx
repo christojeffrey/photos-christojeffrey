@@ -12,7 +12,7 @@ export default function Home() {
       </div>
       {/* photos */}
       <div className="w-full columns-1 md:columns-2 lg:columns-4 gap-0">
-        {images.map(async (image, index) => {
+        {images.reverse().map(async (image, index) => {
           const base64 = await getBase64(image.src);
           return (
             <div key={index} className="rounded-lg relative p-1 md:p-2 lg:p-4">
