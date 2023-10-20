@@ -3,15 +3,16 @@ import { getPlaiceholder } from "plaiceholder";
 
 export async function getBase64(fileName: string) {
   try {
-    const file = await fs.readFile("./public" + fileName);
+    const src = fileName;
 
-    const { base64 } = await getPlaiceholder(file);
+    const buffer = await fetch(src, { cache: "no-store" }).then(async (res) => Buffer.from(await res.arrayBuffer()));
 
-    // console.log(base64);
+    const { base64 } = await getPlaiceholder(buffer);
+
     return base64;
   } catch (err) {
-    console.log("err", err);
-    return "asfd";
+    err;
+    return "error";
   }
 }
 
