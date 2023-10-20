@@ -150,6 +150,10 @@ const images = [
     alt: "niagara background",
   },
   {
+    src: "/montreal-road.jpg",
+    alt: "montreal road",
+  },
+  {
     src: "/niagara-bridge.jpg",
     alt: "niagara bridge",
   },
@@ -162,12 +166,76 @@ const images = [
     alt: "niagara to us",
   },
   {
+    src: "/notredame-left.jpg",
+    alt: "notredame left",
+  },
+  {
     src: "/niagara-traffic.jpg",
     alt: "niagara traffic",
   },
   {
     src: "/park.jpg",
     alt: "park",
+  },
+  {
+    src: "/notredame-right.jpg",
+    alt: "notredame right",
+  },
+  {
+    src: "/ferris-wheel.jpg",
+    alt: "ferris wheel",
+  },
+  {
+    src: "/montreal-road-2.jpg",
+    alt: "montreal road 2",
+  },
+  {
+    src: "/montreal-highway.jpg",
+    alt: "montreal-highway",
+  },
+  {
+    src: "/dark-way.jpg",
+    alt: "dark way",
+  },
+  {
+    src: "/blurry-face.jpg",
+    alt: "blurry face",
+  },
+  {
+    src: "/experimental.jpg",
+    alt: "experimental",
+  },
+  {
+    src: "/shoe.jpg",
+    alt: "shoe",
+  },
+  {
+    src: "/montreal-metro.jpg",
+    alt: "montreal-metro",
+  },
+  {
+    src: "/bagel-train.jpg",
+    alt: "bagel train",
+  },
+  {
+    src: "/skatepark.jpg",
+    alt: "skatepark",
+  },
+  {
+    src: "/shoes.jpg",
+    alt: "shoes",
+  },
+  {
+    src: "/colorful-building.jpg",
+    alt: "colorful-building",
+  },
+  {
+    src: "/commute.jpg",
+    alt: "commute",
+  },
+  {
+    src: "/gas.jpg",
+    alt: "gas",
   },
 ];
 
