@@ -4,7 +4,7 @@ export async function getCSS(fileName: string) {
   try {
     const src = fileName;
 
-    const buffer = await fetch(src).then(async (res) => Buffer.from(await res.arrayBuffer()));
+    const buffer = await fetch(src, { cache: "no-store" }).then(async (res) => Buffer.from(await res.arrayBuffer()));
 
     const { css } = await getPlaiceholder(buffer);
 
