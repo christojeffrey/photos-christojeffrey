@@ -6,7 +6,6 @@ import { PhotoType } from "./type";
 import Photo from "./components/photo";
 
 // add revalidate
-export const revalidate = 60; // revalidate every minute
 export default async function Home() {
   let photos: PhotoType[] = await getData();
   return (
@@ -37,7 +36,11 @@ export default async function Home() {
 }
 
 async function getData() {
-  const res = await fetch("https://admin-api.christojeffrey.com/photos");
+  const res = await fetch("https://admin-api.christojeffrey.com/photos", {
+    next: {
+      revalidate: 60,
+    },
+  });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
