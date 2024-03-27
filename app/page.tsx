@@ -1,5 +1,5 @@
+export const dynamic = "force-dynamic";
 import { getBlurData } from "@/lib";
-import Image from "next/image";
 
 import FullScreenPreview from "./image-preview";
 import { PhotoType } from "./type";
