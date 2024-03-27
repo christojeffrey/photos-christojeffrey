@@ -16,3 +16,16 @@ export async function getCSS(fileName: string) {
 }
 
 export { getBase64 } from "./getBase64";
+
+export async function getCSSRemote(src: string) {
+  try {
+    const buffer = await fetch(src).then(async (res) => Buffer.from(await res.arrayBuffer()));
+
+    const { css } = await getPlaiceholder(buffer);
+
+    console.log(css);
+    return css;s
+  } catch (err) {
+    err;
+  }
+}
