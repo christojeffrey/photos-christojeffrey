@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+export const dynamic = "auto";
 import { getBlurData } from "@/lib";
 
 import FullScreenPreview from "./image-preview";
