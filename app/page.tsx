@@ -1,4 +1,4 @@
-import { getCSSRemote } from "@/lib";
+import { getBlurData } from "@/lib";
 import Image from "next/image";
 
 type Photo = {
@@ -13,6 +13,7 @@ type Photo = {
   };
   title: string;
 };
+
 export default async function Home() {
   let photos: Photo[] = await getData();
   return (
@@ -23,21 +24,19 @@ export default async function Home() {
       </div>
       {/* photos */}
       <div className="w-full columns-1 md:columns-2 lg:columns-4 gap-1 md:gap-2 lg:gap-4 ">
-        {photos.reverse().map(async (image, index) => {
-          // const base64 = await getBase64(image);
-          const css = await getCSSRemote(image.medium.url);
+        {await Promise.all(
+          photos.reverse().map(async (image, index) => {
+            // const base64 = await getBase64(image);
+            const blurData = await getBlurData(image.medium.url);
 
-          // if css string, return error
-          if (typeof css === "string") {
-            return <>error</>;
-          }
-          return (
-            <div key={index} className="rounded-lg relative overflow-hidden mb-1 md:mb-2 lg:mb-4">
-              <div className="absolute inset-0 transform scale-150 filter blur-2xl z-[-1]" style={css} />
-              <Image src={image.medium.url} alt="image" style={{ width: "100%", height: "auto" }} width={0} height={0} sizes="100vw" className="rounded-lg" priority />
-            </div>
-          );
-        })}
+            return (
+              <div key={index} className="rounded-lg relative overflow-hidden mb-1 md:mb-2 lg:mb-4">
+                <div className="absolute inset-0 transform scale-150 filter blur-2xl z-[-1]" style={blurData?.css} />
+                <Image src={image.medium.url} alt="image" style={{ width: "100%", height: "auto" }} width={0} height={0} sizes="100vw" className="rounded-lg" priority />
+              </div>
+            );
+          })
+        )}
       </div>
     </main>
   );
