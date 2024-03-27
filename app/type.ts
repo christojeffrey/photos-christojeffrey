@@ -9,7 +9,6 @@ type PhotoType = {
     url: string;
   };
   title: string;
-  blurData: any;
 };
 
 export { type PhotoType };

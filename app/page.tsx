@@ -18,13 +18,16 @@ export default async function Home() {
           </div>
           {/* photos */}
           <div className="w-full columns-1 md:columns-2 lg:columns-4 gap-1 md:gap-2 lg:gap-4 ">
-            {photos.reverse().map((photoData, index) => {
-              return (
-                <div key={index}>
-                  <Photo photoData={photoData} blurData={photoData.blurData} />
-                </div>
-              );
-            })}
+            {await Promise.all(
+              photos.reverse().map(async (photoData, index) => {
+                const blurData = await getBlurData(photoData.medium.url);
+                return (
+                  <div key={index}>
+                    <Photo photoData={photoData} blurData={blurData} />
+                  </div>
+                );
+              })
+            )}
           </div>
         </section>
       </FullScreenPreview>
@@ -36,15 +39,6 @@ async function getData() {
   const res = await fetch("https://admin-api.christojeffrey.com/photos");
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
-  const photos = (await res.json()).photos;
-  const blurData = await Promise.all(
-    photos.map(async (photo: PhotoType) => {
-      return await getBlurData(photo.medium.url);
-    })
-  );
-  // add blurData to photos
-  photos.forEach((photo: PhotoType, index: number) => {
-    photo.blurData = blurData[index];
-  });
-  return photos;
+
+  return (await res.json()).photos;
 }
