@@ -2,13 +2,14 @@ type PhotoType = {
   full: {
     url: string;
   };
-  thumb: {
+  thumbnail: {
     url: string;
   };
   medium: {
     url: string;
   };
   title: string;
+  blurData: any;
 };
 
 export { type PhotoType };

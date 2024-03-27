@@ -9,7 +9,6 @@ export default function Photo({ photoData, blurData }: { photoData: PhotoType; b
   const [storeData, setStoreData] = useContext(StoreContext);
 
   function handleClick() {
-    console.log("clicked");
     setStoreData({ isShown: !storeData.isShown, photoData: photoData, blurData: blurData });
   }
   return (
