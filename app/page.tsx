@@ -5,6 +5,8 @@ import { PhotoType } from "./type";
 
 import Photo from "./components/photo";
 
+// add revalidate
+export const revalidate = 60; // revalidate every minute
 export default async function Home() {
   let photos: PhotoType[] = await getData();
   return (
