@@ -36,7 +36,7 @@ export default async function Home() {
 }
 
 async function getData() {
-  const res = await fetch("https://admin-api.christojeffrey.com/photos");
+  const res = await fetch("https://admin-api.christojeffrey.com/photos", { next: { tags: ["photos"] } });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
