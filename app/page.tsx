@@ -18,16 +18,13 @@ export default async function Home() {
           </div>
           {/* photos */}
           <div className="w-full columns-1 md:columns-2 lg:columns-4 gap-1 md:gap-2 lg:gap-4 ">
-            {await Promise.all(
-              photos.reverse().map(async (photoData, index) => {
-                const blurData = await getBlurData(photoData.medium.url);
-                return (
-                  <div key={index}>
-                    <Photo photoData={photoData} blurData={blurData} />
-                  </div>
-                );
-              })
-            )}
+            {photos.reverse().map(async (photoData, index) => {
+              return (
+                <div key={index}>
+                  <Photo photoData={photoData}  />
+                </div>
+              );
+            })}
           </div>
         </section>
       </FullScreenPreview>
