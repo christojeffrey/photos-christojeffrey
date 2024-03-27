@@ -9,6 +9,7 @@ type PhotoType = {
     url: string;
   };
   title: string;
+  blurBase64: string;
 };
 
 export { type PhotoType };

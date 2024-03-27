@@ -35,6 +35,8 @@ export default function FullScreenPreview(props: { children: React.ReactNode }) 
                 objectFit="contain"
                 layout="fill"
                 priority
+                placeholder="blur"
+                blurDataURL={storeData.photoData.blurBase64}
               />
             </>
           )}
