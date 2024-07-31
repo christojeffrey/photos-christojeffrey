@@ -1,9 +1,6 @@
-import { getBlurData } from "@/lib";
-
 import FullScreenPreview from "./image-preview";
-import { PhotoType } from "./type";
 
-import Photo from "./components/photo";
+import Gallery from "./gallery";
 
 // add revalidate
 export default async function Home() {
@@ -14,17 +11,11 @@ export default async function Home() {
         <section className="flex md:flex-row min-h-screen flex-col items-start justify-between p-6">
           {/* sidebar */}
           <div className="top-6 md:sticky w-[200px]">
-            <div className="p-5">photos by Christopher Jeffrey</div>
+            <div className="p-5">photos by meeeee</div>
           </div>
           {/* photos */}
-          <div className="w-full columns-1 md:columns-2 lg:columns-4 gap-1 md:gap-2 lg:gap-4 ">
-            {photos.reverse().map(async (photoData, index) => {
-              return (
-                <div key={index}>
-                  <Photo src={photoData.attributes.origin_path} />
-                </div>
-              );
-            })}
+          <div className="flex-1">
+            <Gallery photos={photos} />
           </div>
         </section>
       </FullScreenPreview>
