@@ -7,7 +7,7 @@ import withPlaiceholder from "@plaiceholder/next";
 const config = {
   // your Next.js config
   images: {
-    domains: ["i.ibb.co"],
+    domains: ["i.ibb.co", "christojeffrey.imgix.net"],
   },
 };
 
