@@ -13,7 +13,7 @@ export default function Gallery({ photos }: { photos: any[] }) {
         media: [640, 768, 1024],
       }}
       render={(photoData: any, index) => (
-        <RevealWrapper key={index} delay={index * 200} className="load-hidden" origin="bottom" distance="20px">
+        <RevealWrapper key={index} delay={200} className="load-hidden" origin="bottom" distance="20px">
           <Photo src={photoData.attributes.origin_path} />
         </RevealWrapper>
       )}
